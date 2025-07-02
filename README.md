@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Áudio Acessível – Abraço Digital</title>
   </head>
-  <body style="font-family: sans-serif; text-align: center; padding: 2rem;">
+  <body style="font-family: sans-serif; text-align: center; padding: 2rem;"/>
     <h2>🎧 Descrição Acessível do Roll Up – Abraço Digital</h2>
     <p>O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
 
