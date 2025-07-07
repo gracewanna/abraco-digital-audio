@@ -3,13 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <title>Áudio Acessível – Abraço Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'fade-in': 'fadeIn 1s ease-out',
+              'slide-up': 'slideUp 0.8s ease-out',
+              'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+              'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+              'wave': 'wave 2s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              bounceSubtle: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-8px)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' },
+                '50%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.6)' },
+              },
+              wave: {
+                '0%, 100%': { transform: 'rotate(0deg)' },
+                '25%': { transform: 'rotate(5deg)' },
+                '75%': { transform: 'rotate(-5deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body style="font-family: sans-serif; text-align: center; padding: 2rem;"/>
-    <h2>🎧 Descrição Acessível do Roll Up – Abraço Digital</h2>
-    <p>O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
-    <audio autoplay controls>
-      <source src="audio.mp3" type="audio/mp3" />
-      O seu navegador não suporta áudio.
-    </audio>
+  <body class="  flex justify-center">
+  <main class="max-w-4xl border border-gray-300">
+      <div class="bg-[#f7f7f7] p-4 justify-between flex items-center">
+          <div class="flex items-center">
+              <img alt="União europeia" src="./ue.jpg" class="w-28"/>
+              <img alt="Italian " src="./italian.jpg" class="w-64"/>
+          </div>
+          <div>
+              <img alt="Hi" src="/hi.png" class="w-16"/>
+          </div>
+      </div>
+      <div class="bg-blue-800 p-4 flex flex-col items-center">
+          <img src="./vamoz.jpg" alt="Logo do Abraço Digital" class="w-32"/>
+
+         <div class="p-8 flex items-center flex-col space-y-2 py-4 pb-8" >
+             <h2 class="text-2xl text-white font-bold ">🎧 Descrição Acessível do Roll Up – Abraço Digital</h2>
+
+             <p class="text-white text-lg">O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
+         </div>
+
+
+          <div class="p-8">
+              <audio autoplay controls>
+                  <source src="audio.mp3" type="audio/mp3"/>
+              </audio>
+          </div>
+          <div class="flex justify-center items-center p-4">
+              <img src="./deficiencia.jpg" alt="Roll Up" class="w-fit h-auto"/>
+          </div>
+      </div>
+      <div class="bg-[#f7f7f7] p-4 justify-between flex flex-col md:flex-row items-center gap-3">
+          <img alt="" class="w-28" src="./inage.jpg"/>
+          <img alt="" class="w-64" src="./terre.jpg" />
+          <img alt="" class="w-28" src="./mondo.jpg" />
+          <img alt="" class="w-64" src="./cies.jpg" />
+      </div>
+  </main>
   </body>
 </html>
