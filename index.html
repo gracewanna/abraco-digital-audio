@@ -42,8 +42,21 @@
         }
       }
     </script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@3/+esm"></script>
+      <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+      <script>
+          window.document.addEventListener('DOMContentLoaded', () => {
+              const player = new Plyr('#player', {
+                  controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+                  autoplay: true,
+                  muted: false,
+                  loop: { active: false },
+              });
 
+              // Play the audio automatically
+              player.play();
+          });
+      </script>
   </head>
   <body class="  flex justify-center">
   <main class="max-w-4xl border border-gray-300">
@@ -65,22 +78,9 @@
              <p class="text-white text-lg">O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
          </div>
           <div class="p-8">
-              <media-controller audio>
-                  <audio
-                          slot="media"
-                          src="audio.mp3"
-                          crossorigin
-                  ></audio>
-                  <media-control-bar>
-                      <media-seek-backward-button></media-seek-backward-button>
-                      <media-play-button></media-play-button>
-                      <media-seek-forward-button></media-seek-forward-button>
-                      <media-time-display></media-time-display>
-                      <media-time-range></media-time-range>
-                      <media-duration-display></media-duration-display>
-                      <media-mute-button></media-mute-button>
-                  </media-control-bar>
-              </media-controller>
+              <audio id="player" autoplay controls>
+                  <source src="./audio.mp3" type="audio/mp3" />
+              </audio>
           </div>
           <div class="flex justify-center items-center p-4">
               <img src="./deficiencia.jpg" alt="Roll Up" class="w-fit h-auto"/>
@@ -93,5 +93,12 @@
           <img alt="" class="w-64" src="./cies.jpg" />
       </div>
   </main>
+
+  <script type="module">
+      window.addEventListener('DOMContentLoaded', () => {
+          const audio = document.querySelector('media-play-button');
+          audio.click();
+      });
+  </script>
   </body>
 </html>
