@@ -12,7 +12,7 @@
     <p>O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
 
     <audio autoplay controls>
-      <source src="https://docs.google.com/uc?export=download&id=15EqyLpUBkhNrKu41cN2Ra1xTg6rqjB0w" type="audio/mpeg" />
+      <source src="WhatsApp Audio 2025-07-07 at 18.14.05.MP4" type="audio/mpeg" />
       O seu navegador não suporta áudio.
     </audio>
   </body>
