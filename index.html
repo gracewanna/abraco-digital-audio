@@ -42,6 +42,8 @@
         }
       }
     </script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@3/+esm"></script>
+
   </head>
   <body class="  flex justify-center">
   <main class="max-w-4xl border border-gray-300">
@@ -62,12 +64,23 @@
 
              <p class="text-white text-lg">O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
          </div>
-
-
           <div class="p-8">
-              <audio autoplay controls>
-                  <source src="audio.mp3" type="audio/mp3"/>
-              </audio>
+              <media-controller audio>
+                  <audio
+                          slot="media"
+                          src="audio.mp3"
+                          crossorigin
+                  ></audio>
+                  <media-control-bar>
+                      <media-seek-backward-button></media-seek-backward-button>
+                      <media-play-button></media-play-button>
+                      <media-seek-forward-button></media-seek-forward-button>
+                      <media-time-display></media-time-display>
+                      <media-time-range></media-time-range>
+                      <media-duration-display></media-duration-display>
+                      <media-mute-button></media-mute-button>
+                  </media-control-bar>
+              </media-controller>
           </div>
           <div class="flex justify-center items-center p-4">
               <img src="./deficiencia.jpg" alt="Roll Up" class="w-fit h-auto"/>
