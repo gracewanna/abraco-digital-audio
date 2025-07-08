@@ -61,8 +61,6 @@
 
          <div class="p-8 flex items-center flex-col space-y-2 py-4 pb-8" >
              <h2 class="text-2xl text-white font-bold ">🎧 Descrição Acessível do Roll Up – Abraço Digital</h2>
-
-             <p class="text-white text-lg">O áudio será reproduzido automaticamente. Se não ouvir, verifique o volume ou clique em "play".</p>
          </div>
           <div class="p-8">
               <audio id="player" src="./audio.mp3" muted autoplay playsinline></audio>
@@ -89,11 +87,11 @@
                   controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
               });
 
-              const audio = document.getElementById('player');
-              audio.muted = false;
-              audio.autoplay = true;
-              audio.load();
-              player.play().catch(err => console.warn('Autoplay blocked:', err));
+              // const audio = document.getElementById('player');
+              // audio.muted = false;
+              // audio.autoplay = true;
+              // audio.load();
+              // player.play().catch(err => console.warn('Autoplay blocked:', err));
           });
       </script>
   </main>
